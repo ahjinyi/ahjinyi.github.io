@@ -1,0 +1,417 @@
+	*{
+	margin: 0;
+	padding: 0;
+}
+.nav{
+	width: 100%;
+	height: 960px;
+	margin: 0 auto;
+}
+.ss{
+background: url(../images/ss2.jpg)no-repeat;
+	width: 1903px;
+	height: 960px;
+	margin: 0 auto;
+}
+.aa{
+	width: 100%;
+	height: 80px;
+	position: relative;
+}
+.aa img{
+	margin-left: 92px;
+	margin-top: 24px;
+	position: absolute;
+}
+.aa p{
+	font-size: 26px;
+	color: #fff;
+	margin-left: 154px;
+	margin-top: 20px;
+	position: absolute;
+}
+.aa .nav1{
+	width: 700px;
+	height: 78px;
+	margin-left: 780px;
+	position: absolute;
+
+}
+.nav1 .one>li{
+	float: left;
+	width: 160px;
+	height: 40px;
+	list-style: none;
+	text-align: center;
+
+}
+.nav1 .one>li a{
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	width: 160px;
+	height: 80px;
+	font-weight: normal;
+	line-height: 80px;
+	text-decoration: none;
+	display: inline-block;
+	
+}
+.nav1 .one>li a:hover{
+	width: 160px;
+	height: 80px;
+	color: #FFFFFF;
+	background-color: #2a70ff;
+	display: inline-block;
+}
+
+.nav-link {
+	
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.1s ease;
+}
+
+/* 未选中态 */
+.nav-link {
+  background-color: transparent;
+}
+
+/* 选中态（active） */
+.nav-item.active .nav-link {
+  background-color: #1677ff; /* 蓝色选中背景，和你截图一致 */
+  color: #fff;
+  width: 160px;
+  height: 80px;
+}
+
+/* 鼠标 hover 效果 */
+.nav-link:hover {
+  background-color: #4096ff;
+  color: #fff;
+}
+
+.az{
+	width: 140px;
+	height: 80px;
+	margin-left: 900px;
+	position: absolute;
+}
+.as{
+	background: url(../images/yy.png)no-repeat;
+		width: 26px;
+		height: 26px;
+		margin-top: 25px;
+}
+.as .dv>li{
+	float: left;
+	width: 140px;
+	height: 40px;
+	list-style: none;
+	margin-left: 40px;
+}
+.as .dv>li a{
+	font-size: 16px;
+	font-weight: 400;
+	color: #FFFFFF;
+	line-height: 20px;
+	text-decoration: none;
+	display: inline-block;
+}
+.as .dv>li a:hover{
+	color: #FFFFFF;
+	border-bottom: 3px #FFFFFF solid;
+	display: inline-block;
+}
+.as .zx{
+	width: 100px;
+	background-color: #2a70ff;
+	display: none;
+}
+.ignore{
+	font-size: 16px;
+	list-style: none;
+	margin-left: 10px;
+}
+.as .dv>li:hover .zx{
+	display: inline-block;
+}
+.xt{
+	width: 100%;
+	height: 1px;
+	background-color: #FFFFFF;
+}
+.comp{
+	width: 1700px;
+	height: 900px;
+	margin: 0 auto;
+	margin-top: -240px;
+	
+}
+.up{
+	width: 1700px;
+	height: 200px;
+	margin-top: 140px;
+}
+.up p1{
+	font-size: 34px;
+	color: #1149ea;
+	font-weight: 450;
+	margin-left: 186px;
+}
+.up h1{
+	width: 40px;
+	height: 3px;
+	background-color: #a7a7a7;
+	margin-left: 234px;
+	margin-top: 7px;
+	position: relative;
+}
+.up p2{
+	font-size: 18px;
+	color: #505050;
+	margin-left: 184px;
+	margin-top: 5px;
+	position: absolute;
+}
+.bt{
+	width: 1700px;
+	height: 600px;
+}
+ /* 全局重置 */
+* {
+	margin: 0;
+	padding: 0;
+	font-weight: 520;
+	font-size: 22px;
+	box-sizing: border-box;
+	font-family: "微软雅黑", sans-serif;
+}
+.tab-container {
+	width: 80%;
+	margin: 50px auto;
+}
+/* 标签栏布局 */
+.tab-nav {
+	display: flex;
+	gap: 20px; /* 标签之间的间距 */
+	margin-bottom: 30px;
+}
+.tab-item {
+	padding: 10px 100px;
+	border: 1px solid #000; 
+	background-color: #FFFFFF;
+	border-radius: 4px;
+	color: #333;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+/* 激活态样式（对应图中蓝色按钮） */
+.tab-item.active {
+	 background: #355ef6;
+	color: #fff;
+	border-color: #355ef6;
+}
+.tab-item:hover:not(.active) {
+	 border-color: #355ef6;
+	color: #355ef6;
+}
+/* 内容区默认隐藏，激活时显示 */
+.tab-panel {
+	margin-top: 100px;
+	display: none;
+}
+ .tab-panel.active {
+	 margin-top: 80px;
+	display: block;
+}
+ /* 产品卡片样式（模拟图中布局） */
+.product-list {
+	display: flex;
+	gap: 58px;
+	flex-wrap: wrap;
+}
+.product-card1 {
+	 width: 400px;
+	height: 380px;
+	margin-top: 20px;
+	position: relative;
+}
+.product-card1 p {
+	font-size: 26px;
+	font-weight: normal;
+	position: absolute;
+	margin-left: 22px;
+	margin-top: 22px;
+	color: #000;
+}
+.product-card1 img {
+	width: 400px;
+	height: 380px;
+	position: absolute;
+}
+.product-card1 .detail-btn {
+	position: absolute;
+	display: inline-block;
+	margin-left: 250px;
+	margin-top: 14px;
+	color: #fff;
+	text-decoration: none;
+}
+.product-card2 {
+	width: 400px;
+	height: 380px;
+	margin-top: 20px;
+	position: relative;
+}
+.product-card2 p {
+	font-size: 26px;
+	font-weight: normal;
+	position: absolute;
+	margin-left: 22px;
+	margin-top: 22px;
+	color: #000;
+}
+.product-card2 img {
+	width: 400px;
+	height: 380px;
+	position: absolute;
+}
+.product-card2 .detail-btn {
+	position: absolute;
+	display: inline-block;
+	margin-left: 250px;
+	margin-top: 14px;
+	color: #fff;
+	text-decoration: none;
+}
+.product-card3 {
+	width: 400px;
+	height: 380px;
+	margin-top: 20px;
+	position: relative;
+}
+.product-card3 p {
+	font-size: 26px;
+	font-weight: normal;
+	position: absolute;
+	margin-left: 22px;
+	margin-top: 22px;
+	color: #000;
+}
+.product-card3 img {
+	width: 400px;
+	height: 380px;
+	position: absolute;
+}
+.product-card3 .detail-btn {
+	position: absolute;
+	display: inline-block;
+	margin-left: 250px;
+	margin-top: 14px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.db{
+	width: 1903px;
+	height: 543px;
+	margin: 0 auto;
+	margin-top: 120px;
+	background: url(../images/db.png)no-repeat;
+}
+.dba{
+	width: 951px;
+	height: 543px;
+	float: left;
+	position: relative;
+}
+.dba img{
+	width: 46px;
+	height: 32px;
+	margin-left: 300px;
+	margin-top: 126px;
+	position: absolute;
+}
+.dba p{
+	position: absolute;
+	font-size: 26px;
+	color: #FFFFFF;
+	margin-left: 360px;
+	margin-top: 122px;
+}
+.dba h1{
+	position: absolute;
+	margin-left: 300px;
+	margin-top: 260px;
+}
+.dba p1{
+	position: absolute;
+	font-size: 20px;
+	color: #FFFFFF;
+	margin-left: 330px;
+	margin-top: 260px;
+}
+.dba h2{
+	position: absolute;
+	margin-left: 300px;
+	margin-top: 320px;
+}
+.dba p2{
+	position: absolute;
+	font-size: 20px;
+	color: #FFFFFF;
+	margin-left: 330px;
+	margin-top: 320px;
+}
+.dba h3{
+	position: absolute;
+	margin-left: 300px;
+	margin-top: 383px;
+}
+.dba p3{
+	position: absolute;
+	font-size: 20px;
+	color: #FFFFFF;
+	margin-left: 330px;
+	margin-top: 380px;
+}
+.dba h4{
+	position: absolute;
+	margin-left: 300px;
+	margin-top: 440px;
+}
+.dba p4{
+	position: absolute;
+	font-size: 20px;
+	color: #FFFFFF;
+	margin-left: 330px;
+	margin-top: 440px;
+}
+
+.dbs{
+	width: 952px;
+	height: 543px;
+	float: right;
+}
+.dbs ul{
+	width: 600px;
+	height: 200px;
+	margin-top: 200px;
+}
+.dbs ul>li{
+	float: left;
+	width: 160px;
+	height: 40px;
+	list-style: none;
+	text-align: center;
+
+}
+.dbs ul>li a{
+	font-size: 18px;
+	color: #FFFFFF;
+	line-height: 20px;
+	text-decoration: none;
+	display: inline-block;
+}

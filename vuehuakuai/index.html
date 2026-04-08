@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>vue.js图片左右滚动切换代码</title>
+
+
+<link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+
+<h1>Vue.js 卡片滚动</h1>
+
+<script id="v-carousel" type="x/template">
+	<div class="card-carousel-wrapper">
+		<div class="card-carousel--nav__left" @click="moveCarousel(-1)" :disabled="atHeadOfList"></div>
+		<div class="card-carousel">
+			<div class="card-carousel--overflow-container">
+				<div class="card-carousel-cards" :style="{ transform: 'translateX' + '(' + currentOffset + 'px' + ')'}">
+					<div class="card-carousel--card" v-for="item in items"><img src="img/200x200.png">
+						<div class="card-carousel--card--footer">
+							<p>{{ item.name }}</p>
+							<p>{{ item.tag }}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-carousel--nav__right" @click="moveCarousel(1)" :disabled="atEndOfList"></div>
+	</div>
+</script>
+
+<div id="app"> 
+	<carousel></carousel>
+</div>
+
+<script src="https://www.jq22.com/jquery/vue.min.js"></script>
+<script src="js/js.js"></script>
+
+</body>
+</html>
