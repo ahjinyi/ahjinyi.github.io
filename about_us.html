@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<script>
+	    translate.service.use('client.edge'); // 设置机器翻译服务通道
+	    translate.execute(); // 执行翻译
+	</script>
+	<head>
+		<script src="https://cdn.staticfile.net/translate.js/3.12.0/translate.js"></script>
+		<script src="js/js.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+		<meta charset="utf-8">
+		<title>关于我们</title>
+		<link rel="stylesheet" type="text/css" href="css/about_us.css"/>
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div class="nav">
+			<div class="ss">
+			<div class="aa">
+				<img src="images/logo.png" >
+				<p>安徽仅一智能科技有限公司</p> 
+				<div class="nav1">
+					<ul class="one">
+						<li class="nav-item"><a href="index.html" class="nav-link">首页</a></li>
+						<li class="nav-item"><a href="product.html" class="nav-link">产品介绍</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">应用领域</a></li>
+						<li class="nav-item"><a href="about_us.html" class="nav-link">关于我们</a></li>
+					</ul>
+					<style>
+					    .nav-link.active {
+					        background: #2a70ff;
+					        color: #fff;
+							width: 160px;
+							height: 80px;
+					    }
+					</style>
+					
+					<script>
+					    document.addEventListener('DOMContentLoaded', function() {
+					        const links = document.querySelectorAll('.one .nav-link');
+					        const currUrl = window.location.href;
+					        
+					        links.forEach(link => {
+					            if (link.href === currUrl) {
+					                link.classList.add('active');
+					            }
+					        });
+					    });
+					</script>
+					
+						<div class="az">
+							<div class="as">
+								<ul class="dv">
+									<li><a href="">选择语言</a>
+									<div class="zx">
+										<ul class="ignore">
+										    <li><a href="javascript:translate.changeLanguage('english');">English</a></li>
+										    <li><a href="javascript:translate.changeLanguage('chinese_simplified');">简体中文</a></li>
+										    <li><a href="javascript:translate.changeLanguage('chinese_traditional');">繁體中文</a></li>
+											<li><a href="javascript:translate.changeLanguage('french');">Français</a></li>
+											<li><a href="javascript:translate.changeLanguage('korean');">한국어</a></li>
+										</ul>
+									</div>
+									</li>
+								</ul>
+							</div>
+						</div> 
+					</div>
+				</div>
+				<div class="xt"></div>
+			</div>
+		</div>
+		
+		<div class="compa">
+			<div class="bt">
+				<p1>公司介绍</p1>
+				<h1></h1>
+				<p2>Company Introduction</p2>
+			</div>
+			<div class="qiy">
+				<p1>安徽仅一智能科技有限公司</p1>
+				<h1></h1>
+				<p2>安徽仅一智能科技有限公司是一家以喷码机技术行业应用为核心，拥有了强大的创新及研发能力，
+				公司拥有自主知识产权及多项专利，提供多系列标准化产品，适用于可变数据、数据库以及包括条形码、
+				二维码在内的多种可变信息的喷印。同时还支持各种标识设备的定制开发，为客户提供SDK、OEM、ODM支持，
+				以满足客户全方位、多领域的需求。有信、有心、有信心------不忘初心，始终是我们坚持的企业经营理念。</p2>
+			</div>
+		</div>
+		<div class="corp">
+			<div class="cor_1">
+				<p1>企业宗旨</p1>
+				<h1></h1>
+				<p2>Corporate Purpose</p2>
+			</div>
+			<div class="cor_2">
+				<div class="co_1"><p>有信</p></div>
+				<div class="co_2"><p>有心</p></div>
+				<div class="co_3"><p>有信心</p></div>
+				<div class="co_4"><p>不忘初心</p></div>
+			</div>
+		</div>
+		<div class="honors">
+			<div class="hon">
+				<p1>企业荣誉</p1>
+				<h1></h1>
+				<p2>Corporate Honors</p2>
+			</div>
+		</div>
+		<style>
+		        body { margin: 0; }
+		        #main { 
+		            width: 1903px; 
+		            height: 780px;
+					margin: 0 auto;
+		            background: #4d6cb4; 
+		        }
+		    </style>
+			<div class="map">
+				<div class="ma"></div>
+		<div id="main"></div>
+		   <script>
+		   // ========== 1. 地图核心配置（复制到你页面） ==========
+		   let myChart = null;
+		   // 映射你页面的语言标识（english ↔ en；chinese_simplified ↔ zh-CN）
+		   const langMap = {
+		       'english': 'en',
+		       'chinese_simplified': 'zh-CN',
+		       'chinese_traditional': 'zh-CN', // 繁体也显示中文标注
+		       'french': 'en', // 法语默认显示英文（可自行扩展）
+		       'korean': 'en'  // 韩语默认显示英文（可自行扩展）
+		   };
+		   // 地图中英文数据
+		   const mapLangConfig = {
+		       'zh-CN': {
+		           points: [["合肥", 117.27, 31.86],["美国", -100, 40],["英国", -2, 52],["法国", 2, 47],
+		                    ["西班牙", -3, 40],["意大利", 12, 42],["俄罗斯", 90, 60],["韩国", 127, 37],
+		                    ["日本", 138, 36],["越南", 106, 16],["菲律宾", 122, 13],["马来西亚", 102, 3],
+		                    ["巴拿马", -80, 9],["秘鲁", -75, -10],["智利", -70, -30],["阿根廷", -65, -40],
+		                    ["新西兰", 174, -40]],
+		       },
+		       'en': {
+		           points: [["Hefei", 117.27, 31.86],["America", -100, 40],["UK", -2, 52],["France", 2, 47],
+		                    ["Spain", -3, 40],["Italy", 12, 42],["Russia", 90, 60],["Korea", 127, 37],
+		                    ["Japan", 138, 36],["Vietnam", 106, 16],["Philippines", 122, 13],["Malaysia", 102, 3],
+		                    ["Panama", -80, 9],["Peru", -75, -10],["Chile", -70, -30],["Argentina", -65, -40],
+		                    ["New Zealand", 174, -40]],
+		       }
+		   };
+		   
+		   // 地图渲染函数
+		   function renderMap(targetLang) {
+		       // 初始化地图（替换成你页面的地图容器ID！比如你的容器是id="map"，就改成'map'）
+		       if (!myChart) myChart = echarts.init(document.getElementById('main'));
+		       
+		       const config = mapLangConfig[targetLang];
+		       const geoData = config.points.map(([name, lng, lat]) => ({ name, value: [lng, lat] }));
+		       const center = geoData[0].value;
+		       const linesData = geoData.slice(1).map(item => ({ coords: [center, item.value] }));
+		   
+		       myChart.setOption({
+		           backgroundColor: '#4d6cb4',
+		           geo: { map: 'world', roam: false, zoom: 1.2, label: { show: false }, itemStyle: { areaColor: '#fff', borderColor: '#4d6cb4' } },
+		           series: [
+		               { type: 'lines', zlevel: 1, lineStyle: { color: 'red', width: 1 }, data: linesData },
+		               { type: 'scatter', coordinateSystem: 'geo', zlevel: 2, symbol: 'pin', symbolSize: (val, params) => params.dataIndex === 0 ? 34 : 22,
+		                 itemStyle: { color: 'red' }, label: { show: true, formatter: '{b}', color: 'black', fontSize: 14, offset: [0, 18] }, data: geoData }
+		           ],
+		           graphic: [{ type: 'text', left: 'center', bottom: 20, style: { text: config.bottomText, fill: '#fff', fontSize: 20 } }]
+		       }, true);
+		   }
+		   
+		   // ========== 2. 监听你页面的语言切换事件（核心！） ==========
+		   // 重写translate.changeLanguage方法，保留原有逻辑+新增地图切换
+		   const originalChangeLang = translate.changeLanguage;
+		   translate.changeLanguage = function(lang) {
+		       // 1. 执行你原有页面的语言切换逻辑
+		       originalChangeLang.call(translate, lang);
+		       // 2. 联动地图切换（根据langMap映射）
+		       const mapLang = langMap[lang] || 'en'; // 未知语言默认英文
+		       renderMap(mapLang);
+		   };
+		   
+		   // ========== 3. 页面加载时初始化地图（默认简体中文） ==========
+		   renderMap('zh-CN');
+		   // 窗口适配
+		   window.onresize = () => myChart && myChart.resize();
+		   </script>
+		   <div class="mp">
+			   <h1></h1>
+			   <p>做全球最优秀的工业标识供应商</p>
+			   <h2></h2>
+			   </div>
+		   </div>
+		
+		
+		<div class="db">
+			<div class="dba">
+				<img src="images/logo.png" >
+				<p>安徽仅一智能科技有限公司</p>
+				<h1><input type="image" src="images/dh.png" /></h1>
+				<p1>地址：安徽省合肥市高新区潜水东路10号</p1>
+				<h2><input type="image" src="images/sj.png" /></h2>
+				<p2>手机：13822169792</p2>
+				<h3><input type="image" src="images/tel.png" /></h3>
+				<p3>电话：0551-65330207</p3>
+				<h4><input type="image" src="images/xx.png" /></h4>
+				<p4>邮箱：13822169792@163.com<p4>
+			</div>
+			<div class="dbs">
+				<ul>
+					<li><a href="">产品介绍</a></li>
+					<li><a href="">应用领域</a></li>
+					<li><a href="">关于我们</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
