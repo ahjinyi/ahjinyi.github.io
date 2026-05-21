@@ -1,0 +1,95 @@
+body {
+  color: #2c3e50;
+  font-family: 'Source Sans Pro', sans-serif;
+  min-height: 1000px;
+  padding:0;
+  margin:0;
+}
+
+/* 轮播容器基础样式 */
+.card-carousel {
+
+  width: 100%;
+  overflow: hidden; /* 隐藏超出容器的部分 */
+  padding: 20px 0;
+}
+
+/* 轮播滑动容器 - 核心：横向排列 */
+.card-carousel--wrapper {
+  display: flex; /* 横向排列子元素 */
+  flex-direction: row; /* 明确横向（默认就是row，可省略） */
+  transition: transform 0.3s ease; /* 滑动动画 */
+  width: fit-content; /* 宽度自适应内容，避免压缩 */
+}
+.product-title:hover {
+  color: #0066cc; /* 变成主题蓝色，和卡片边框呼应 */
+  text-decoration: underline; /* 悬浮时显示下划线，增强提示 */
+}
+
+/* 轮播卡片 - 横向排列的关键 */
+.card-carousel--card {
+  position: relative; 
+  width: 460px; /* 每张卡片宽度，和paginationFactor一致 */
+  height: auto; /* 高度自适应图片 */
+  flex-shrink: 0; /* 禁止卡片被压缩（核心！否则会挤在一起） */
+}
+
+/* 图片样式 - 确保图片在卡片内横向显示 */
+.card-carousel-cards .card-carousel--card img {
+  vertical-align: bottom;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  transition: opacity 150ms linear;
+  user-select: none;
+}
+
+/* 文字样式（保留，显示在图片上） */
+.card-text {
+  position: absolute;
+  bottom: 294px;
+  font-weight: normal;
+  text-decoration: none;
+  left: 28%;
+  transform: translateX(-50%);
+  margin: 0;
+  color: #000;
+  font-size: 28px;
+}
+.card-text:hover{
+	font-size: 28px;
+	color: #2a70ff;
+}
+html.lang-en .card-text,
+html.lang-fr .card-text{
+  font-size: 18px;
+}
+
+/* 切换按钮样式（保留） */
+.carousel-btn {
+  position: absolute;
+  top: 52%;
+  transform: translateY(-50%);
+  width: 58px;
+  height: 58px;
+  border: none;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 14;
+}
+.prev { left: 70px; }
+.next { right: 70px; }
+.carousel-btn:disabled {
+  background: rgba(0, 0, 0, 0.2);
+  cursor: not-allowed;
+}
+
+h1 {
+  font-size: 3.6em;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 0;
+  color: #42b883;
+}

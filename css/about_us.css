@@ -1,0 +1,598 @@
+	*{
+	margin: 0;
+	padding: 0;
+}
+/* ========== 1. 全局解决文本溢出（所有语言通用） ========== */
+/* 给所有文本容器加上自动换行规则，防止英文单词溢出 */
+p, .content, .text-container, div, span, li {
+  word-wrap: break-word; /* 允许长单词换行 */
+  word-break: break-all; /* 强制所有字符换行（兼容旧浏览器） */
+  overflow-wrap: break-word; /* 现代浏览器标准换行规则 */
+}
+
+/* ========== 2. 语言专属字体大小控制 ========== */
+/* 中文/韩文默认大小（根据你页面现有字体调整，比如16px） */
+html.lang-zhs body,
+html.lang-zht body,
+html.lang-ko body {
+  font-size: 10px;
+}
+
+/* 英文/法语缩小（比中文小2px，比如14px，避免溢出） */
+html.lang-en body,
+html.lang-fr body {
+  font-size: 10px;
+}
+
+/* 如果你只想缩小特定区域（比如公司介绍文本），可以单独加类名 */
+html.lang-en .company-intro,
+html.lang-fr .company-intro {
+  font-size: 13px; /* 比全局再小1px，解决长文本溢出 */
+}
+html.lang-en .aa p,
+html.lang-fr .aa p{
+  font-size: 24px; /* 比全局再小1px，解决长文本溢出 */
+}
+.nav{
+	width: 100%;
+	height: 960px;
+	margin: 0 auto;
+}
+.ss{
+background: url(../images/ss3.jpg)no-repeat;
+	width: 1903px;
+	height: 960px;
+	margin: 0 auto;
+}
+.aa{
+	width: 100%;
+	height: 80px;
+	position: relative;
+}
+.aa img{
+	margin-left: 92px;
+	margin-top: 24px;
+	position: absolute;
+}
+.aa p{
+	font-size: 26px;
+	color: #fff;
+	margin-left: 154px;
+	margin-top: 20px;
+	position: absolute;
+}
+.aa .nav1{
+	width: 700px;
+	height: 78px;
+	margin-left: 780px;
+	position: absolute;
+
+}
+.nav1 .one>li{
+	float: left;
+	width: 160px;
+	height: 40px;
+	list-style: none;
+	text-align: center;
+
+}
+.nav1 .one>li a{
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	width: 160px;
+	height: 80px;
+	font-weight: normal;
+	line-height: 80px;
+	text-decoration: none;
+	display: inline-block;
+	
+}
+html.lang-en .nav1 .one>li a,
+html.lang-fr .nav1 .one>li a{
+  font-size: 15px; /* 比全局再小1px，解决长文本溢出 */
+}
+.nav1 .one>li a:hover{
+	width: 160px;
+	height: 80px;
+	color: #FFFFFF;
+	background-color: #2a70ff;
+	display: inline-block;
+}
+
+.az{
+	width: 140px;
+	height: 80px;
+	margin-left: 900px;
+	position: absolute;
+}
+.as{
+	background: url(../images/yy.png)no-repeat;
+		width: 26px;
+		height: 26px;
+		margin-top: 25px;
+}
+.as .dv>li{
+	float: left;
+	width: 140px;
+	height: 40px;
+	list-style: none;
+	margin-left: 40px;
+}
+.as .dv>li a{
+	font-size: 16px;
+	font-weight: 400;
+	color: #FFFFFF;
+	line-height: 20px;
+	text-decoration: none;
+	display: inline-block;
+}
+.as .dv>li a:hover{
+	color: #FFFFFF;
+	border-bottom: 3px #FFFFFF solid;
+	display: inline-block;
+}
+.as .zx{
+	width: 100px;
+	background-color: #2a70ff;
+	display: none;
+}
+.ignore{
+	font-size: 16px;
+	list-style: none;
+	margin-left: 10px;
+}
+.as .dv>li:hover .zx{
+	display: inline-block;
+}
+.xt{
+	width: 100%;
+	height: 1px;
+	background-color: #FFFFFF;
+}
+.compa{
+	width: 1320px;
+	height: 800px;
+	margin: 0 auto;
+	margin-top: -400px;
+	background: url(../images/gl.png)no-repeat;
+}
+.bt{
+	width: 660px;
+	height: 800px;
+	float: left;
+	position: relative;
+}
+.bt p1{
+	font-size: 34px;
+	color: #FFFFFF;
+	font-weight: 450;
+	position: absolute;
+	margin-left: 70px;
+	margin-top: 60px;
+}
+html.lang-en .bt p1,
+html.lang-fr .bt p1{
+  font-size: 25px; /* 比全局再小1px，解决长文本溢出 */
+  margin-left: 30px;
+}
+.bt h1{
+	width: 40px;
+	height: 3px;
+	background-color: #ebebeb;
+	position: absolute;
+	margin-left: 114px;
+	margin-top: 116px;
+}
+html.lang-en .bt h1,
+html.lang-fr .bt h1{
+  margin-top: 114px;
+}
+.bt p2{
+	font-size: 18px;
+	color: #ebebeb;
+	margin-left: 46px;
+	margin-top: 124px;
+	position: absolute;
+}
+.qiy{
+	width: 620px;
+	height: 800px;
+	float: left;
+	position: relative;
+}
+.qiy p1{
+	font-size: 32px;
+	color: #FFFFFF;
+	position: absolute;
+	margin-left: 44px;
+	margin-top: 190px;
+}
+html.lang-en .qiy p1,
+html.lang-fr .qiy p1{
+  font-size: 26px; /* 比全局再小1px，解决长文本溢出 */
+}
+.qiy h1{
+	width: 116px;
+	height: 2px;
+	position: absolute;
+	background-color: #FFFFFF;
+	margin-left: 44px;
+	margin-top: 250px;
+}
+.qiy p2{
+	font-size: 26px;
+	color: #FFFFFF;
+	line-height: 50px;
+	font-weight: 400;
+	text-indent: 2em;
+	position: absolute;
+	margin-left: 44px;
+	margin-top: 300px;
+	
+}
+html.lang-en .qiy p2,
+html.lang-fr .qiy p2{
+  font-size: 20px; /* 比全局再小1px，解决长文本溢出 */
+  line-height: 34px;
+}
+.corp{
+	width: 1320px;
+	height: 540px;
+	margin: 0 auto;
+	margin-top: 56px;
+}
+.cor_1{
+	width: 1320px;
+	height: 134px;
+	position: relative;
+}
+.cor_1 p1{
+	font-size: 34px;
+	color: #455fe2;
+	font-weight: 450;
+	position: absolute;
+	margin-left: 12px;
+	margin-top: 8px;
+}
+html.lang-en .cor_1 p1,
+html.lang-fr .cor_1 p1{
+  font-size: 28px; /* 比全局再小1px，解决长文本溢出 */
+  margin-top: 14px;
+  margin-left: 0px;
+}
+.cor_1 h1{
+	width: 40px;
+	height: 3px;
+	background-color: #a7a7a7;
+	position: absolute;
+	margin-left: 60px;
+	margin-top: 66px;
+}
+html.lang-en .cor_1 h1,
+html.lang-fr .cor_1 h1{
+  margin-left: 100px;
+  margin-top: 64px;
+}
+.cor_1 p2{
+	font-size: 18px;
+	color: #454545;
+	margin-top: 74px;
+	position: absolute;
+}
+html.lang-en .cor_1 p2,
+html.lang-fr .cor_1 p2{
+  margin-left: 36px;
+}
+.cor_2{
+	width: 1320px;
+	height: 406px;
+}
+.co_1{
+	width: 306px;
+	height: 340px;
+	float: left;
+	background: url(../images/yx.png)no-repeat;
+}
+.co_1 p{
+	font-size: 30px;
+	color: #FFFFFF;
+	font-weight: 310;
+	text-align: center;
+	margin-top: 280px;
+}
+html.lang-en .co_1 p,
+html.lang-fr .co_1 p{
+	font-size: 24px;
+}
+.co_2{
+	width: 306px;
+	height: 340px;
+	float: left;
+	margin-left: 32px;
+	background: url(../images/yx_1.png)no-repeat;
+}
+.co_2 p{
+	font-size: 30px;
+	color: #FFFFFF;
+	font-weight: 310;
+	text-align: center;
+	margin-top: 280px;
+}
+html.lang-en .co_2 p,
+html.lang-fr .co_2 p{
+	font-size: 24px;
+}
+.co_3{
+	width: 306px;
+	height: 340px;
+	float: left;
+	margin-left: 32px;
+	background: url(../images/yx_2.png)no-repeat;
+}
+.co_3 p{
+	font-size: 30px;
+	color: #FFFFFF;
+	font-weight: 310;
+	text-align: center;
+	margin-top: 280px;
+}
+html.lang-en .co_3 p,
+html.lang-fr .co_3 p{
+	font-size: 24px;
+}
+.co_4{
+	width: 306px;
+	height: 340px;
+	float: left;
+	margin-left: 32px;
+	background: url(../images/yx_3.png)no-repeat;
+}
+.co_4 p{
+	font-size: 30px;
+	color: #FFFFFF;
+	font-weight: 310;
+	text-align: center;
+	margin-top: 280px;
+}
+html.lang-en .co_4 p,
+html.lang-fr .co_4 p{
+	width: 282px;
+	height: 70px;
+	text-align: center;
+	line-height: 28px;
+	margin-left: 10px;
+	margin-top: 274px;
+	font-size: 24px;
+}
+
+.honors{
+	width: 1903px;
+	height: 1060px;
+	margin: 0 auto;
+}
+.hon{
+	width: 1903px;
+	height: 860px;
+	margin-top: 102px;
+	background: url(../images/ry.jpg)no-repeat;
+	position: relative;
+}
+.hon p1{
+	font-size: 34px;
+	color: #455fe2;
+	font-weight: 450;
+	position: absolute;
+	margin-left: 298px;
+	margin-top: -78px;
+}
+html.lang-en .hon p1,
+html.lang-fr .hon p1{
+	margin-left: 290px;
+  font-size: 28px; /* 比全局再小1px，解决长文本溢出 */
+  margin-top: -72px;
+}
+.hon h1{
+	width: 40px;
+	height: 3px;
+	background-color: #a7a7a7;
+	position: absolute;
+	margin-left: 348px;
+	margin-top: -20px;
+}
+html.lang-en .hon h1,
+html.lang-fr .hon h1{
+	margin-left: 380px;
+	margin-top: -22px;
+}
+.hon p2{
+	font-size: 18px;
+	color: #454545;
+	margin-left: 290px;
+	margin-top: -10px;
+	position: absolute;
+}
+html.lang-en .hon p2,
+html.lang-fr .hon p2{
+	margin-left: 320px;
+}
+.map{
+	width: 1903px;
+	height: 900px;
+	margin: 0 auto;
+	background-color: #4d6cb4;
+}
+.ma{
+	width: 1903px;
+	height: 30px;
+	margin: 0 auto;
+}
+.mp{
+	width: 1903px;
+	height: 120px;
+	margin: 0 auto;
+}
+.mp h1{
+	width: 120px;
+	height: 2px;
+	float: left;
+	margin-left: 558px;
+	margin-top: 30px;
+	background-color: #FFFFFF;	
+}
+.mp p{
+	font-size: 36px;
+	color: #FFFFFF;
+	margin-left: 24px;
+	float: left;
+}
+html.lang-en .mp p,
+html.lang-fr .mp p{
+	font-size: 24px;
+	margin-left: 16px;
+	margin-top: 10px;
+}
+.mp h2{
+	width: 120px;
+	height: 2px;
+	float: right;
+	margin-right: 558px;
+	margin-top: 30px;
+	background-color: #FFFFFF;	
+}
+
+.db{
+	width: 1903px;
+	height: 543px;
+	margin: 0 auto;
+	margin-top: 120px;
+	background: url(../images/db.png)no-repeat;
+}
+.dba{
+	width: 951px;
+	height: 543px;
+	float: left;
+	position: relative;
+}
+.dba img{
+	width: 46px;
+	height: 32px;
+	margin-left: 300px;
+	margin-top: 126px;
+	position: absolute;
+}
+html.lang-en .dba img ,
+html.lang-fr .dba img {
+  width: 42px;
+  height: 30px;
+}
+.dba p{
+	position: absolute;
+	font-size: 26px;
+	color: #FFFFFF;
+	margin-left: 360px;
+	margin-top: 122px;
+}
+html.lang-en .dba p ,
+html.lang-fr .dba p {
+  font-size: 22px; /* 比全局再小1px，解决长文本溢出 */
+}
+.dba h1{
+	position: absolute;
+	margin-left: 300px;
+	margin-top: 220px;
+}
+html.lang-en .dba h1 ,
+html.lang-fr .dba h1 {
+  margin-top: 230px;
+}
+.dba p1{
+	position: absolute;
+	font-size: 20px;
+	color: #FFFFFF;
+	margin-left: 330px;
+	margin-top: 260px;
+}
+html.lang-en .dba p1 ,
+html.lang-fr .dba p1 {
+  font-size: 18px; /* 比全局再小1px，解决长文本溢出 */
+  width: 360px;
+  margin-top: 240px;
+}
+.dba h2{
+	position: absolute;
+	margin-left: 300px;
+	margin-top: 320px;
+}
+.dba p2{
+	position: absolute;
+	font-size: 20px;
+	color: #FFFFFF;
+	margin-left: 330px;
+	margin-top: 320px;
+}
+html.lang-en .dba p2 ,
+html.lang-fr .dba p2 {
+  font-size: 18px; /* 比全局再小1px，解决长文本溢出 */
+}
+.dba h3{
+	position: absolute;
+	margin-left: 300px;
+	margin-top: 383px;
+}
+.dba p3{
+	position: absolute;
+	font-size: 20px;
+	color: #FFFFFF;
+	margin-left: 330px;
+	margin-top: 380px;
+}
+html.lang-en .dba p3 ,
+html.lang-fr .dba p3 {
+  font-size: 18px; /* 比全局再小1px，解决长文本溢出 */
+}
+.dba h4{
+	position: absolute;
+	margin-left: 300px;
+	margin-top: 446px;
+}
+.dba p4{
+	position: absolute;
+	font-size: 20px;
+	color: #FFFFFF;
+	margin-left: 330px;
+	margin-top: 440px;
+}
+html.lang-en .dba p4 ,
+html.lang-fr .dba p4 {
+  font-size: 18px; /* 比全局再小1px，解决长文本溢出 */
+}
+.dbs{
+	width: 952px;
+	height: 543px;
+	float: right;
+}
+.dbs ul{
+	width: 600px;
+	height: 200px;
+	margin-top: 200px;
+}
+.dbs ul>li{
+	float: left;
+	width: 160px;
+	height: 40px;
+	list-style: none;
+	text-align: center;
+
+}
+html.lang-en .dbs ul>li a,
+html.lang-fr .dbs ul>li a{
+  font-size: 16px; /* 比全局再小1px，解决长文本溢出 */
+}
+.dbs ul>li a{
+	font-size: 18px;
+	color: #FFFFFF;
+	line-height: 20px;
+	text-decoration: none;
+	display: inline-block;
+}
